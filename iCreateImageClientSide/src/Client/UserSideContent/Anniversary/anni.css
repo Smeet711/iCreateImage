@@ -1,0 +1,11 @@
+.hidden {
+    display: none;
+  }
+
+  .hexagon-image {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 200px; /* Adjust the width as needed */
+    height: 500px; /* Adjust the height as needed */
+    object-fit: cover; /* Maintain aspect ratio and cover the hexagon */
+  }
+  

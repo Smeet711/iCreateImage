@@ -1,0 +1,79 @@
+<div className="pt-[10px]">
+                {/* Month */}
+                <select
+                  className="w-[30%] h-[40px] border-slate-400 rounded-lg"
+                  id="month"
+                  name="month"
+                  onChange={(e) => {
+                    setMonth(e.target.value);
+                  }}
+                  required
+                >
+                  <option value="" disabled selected>
+                    Month
+                  </option>
+                  {/* Add options for each month */}
+                  {/* Example options: */}
+                  <option value="Jan">January</option>
+                  <option value="Feb">February</option>
+                  <option value="Mar">March</option>
+                  <option value="Apr">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="Aug">August</option>
+                  <option value="Sept">September</option>
+                  <option value="Oct">October</option>
+                  <option value="Nov">November</option>
+                  <option value="Dec">December</option>
+                  {/* Add options for the remaining months */}
+                </select>
+
+                {/* Day */}
+                <select
+                  className="w-[20%] h-[40px] border-slate-400 rounded-lg"
+                  id="day"
+                  name="day"
+                  onChange={(e) => {
+                    setDays(e.target.value);
+                  }}
+                  required
+                >
+                  <option value="" disabled selected>
+                    Day
+                  </option>
+                  {/* Add options for each day (1-31) */}
+                  {/* Example options: */}
+                  {Array.from({ length: 31 }, (_, index) => index + 1).map(
+                    (day) => (
+                      <option key={day} value={day.toString().padStart(2, "0")}>
+                        {day}
+                      </option>
+                    )
+                  )}
+                </select>
+
+                {/* Year */}
+                <select
+                  className="w-[30%] h-[40px] border-slate-400 rounded-lg"
+                  id="year"
+                  name="year"
+                  onChange={(e) => {
+                    setYear(e.target.value);
+                  }}
+                  required
+                >
+                  <option value="" disabled selected>
+                    Year
+                  </option>
+                  {/* Add options for each year (1980-2050) */}
+                  {/* Example options: */}
+                  {Array.from({ length: 71 }, (_, index) => 1980 + index).map(
+                    (year) => (
+                      <option key={year} value={year}>
+                        {year}
+                      </option>
+                    )
+                  )}
+                </select>
+              </div>

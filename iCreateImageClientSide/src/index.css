@@ -1,0 +1,11 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+  @apply    text-black font-bold py-2  rounded;
+}
+
+
+

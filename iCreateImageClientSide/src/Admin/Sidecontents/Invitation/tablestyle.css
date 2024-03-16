@@ -1,0 +1,20 @@
+td {
+    padding: 15px;
+}
+
+.Table {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.Table {
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.Table::-webkit-scrollbar {
+    display: none;
+}
